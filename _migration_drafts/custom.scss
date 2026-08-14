@@ -1,0 +1,15 @@
+/* Portfolio-specific presentation */
+.page__hero--overlay { min-height: 78vh; }
+.page__hero--overlay .wrapper { padding: 9rem 1.5rem 4rem; }
+.page__hero--overlay .page__title { font-size: clamp(2.5rem, 7vw, 5.7rem); line-height: .96; max-width: 15ch; }
+.page__hero--overlay .page__lead { max-width: 43rem; font-size: clamp(1.05rem, 1.7vw, 1.4rem); line-height: 1.6; }
+.archive__item-title { font-size: clamp(1.45rem, 2.2vw, 2.15rem); }
+.portfolio-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 1.25rem; margin: 2rem 0 4rem; }
+.portfolio-card { grid-column: span 6; border-top: 1px solid #c8c8c8; padding-top: 1rem; }
+.portfolio-card img { aspect-ratio: 16 / 9; width: 100%; object-fit: cover; margin: 0 0 .9rem; background: #ecebe8; }
+.portfolio-card h3 { margin: 0 0 .3rem; font-size: 1.45rem; }
+.portfolio-card p { margin: 0; line-height: 1.55; }
+.eyebrow { display: block; margin-bottom: .65rem; color: #6b6b6b; font-size: .75rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.section-intro { max-width: 42rem; font-size: 1.15rem; line-height: 1.65; }
+.site-contact { border-top: 1px solid #c8c8c8; margin-top: 4rem; padding-top: 1rem; }
+@media (max-width: 700px) { .portfolio-card { grid-column: span 12; } .page__hero--overlay .wrapper { padding-top: 6rem; } }
