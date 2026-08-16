@@ -12,19 +12,19 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise", "catppuccin_latte", "catppuccin_mocha"
+minimal_mistakes_skin    : "catppuccin_latte" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise", "catppuccin_latte", "catppuccin_mocha"
 
 # Site Settings
 locale                   : "en-US"
 direction                : # "ltr" (default), "rtl" # set the direction of the page
-title                    : "Site Title"
+title                    : "Cheng Zeng (Evelyn)"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Your Name"
-description              : "An amazing website."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name                     : "Cheng Zeng (Evelyn)"
+description              : "Design, technology, and cognition."
+url                      : "https://evelynvi77.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "EvelynVi77/EvelynVi77.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
@@ -67,7 +67,7 @@ reCaptcha:
   secret                 :
 atom_feed:
   path                   : # blank (default) uses feed.xml
-  hide                   : # true, false (default)
+  hide                   : true
 search                   : # true, false (default)
 search_full_content      : # true, false (default)
 search_provider          : # lunr (default), algolia, google
@@ -114,54 +114,25 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Cheng Zeng (Evelyn)"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
-  email            :
+  bio              : "Lecturer in Environmental Design. Researching design, technology, and cognition."
+  location         : "Shenzhen, China"
   # fediverse      : "@you@instance.social"  # used for fediverse:creator meta tag
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-square-envelope"
-      # url: "mailto:your.name@email.com"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-square-x-twitter"
-      # url: "https://twitter.com/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-square-facebook"
-      # url: "https://facebook.com/"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/evelyn-cheng-zeng/"
+    - label: "RedNote"
+      icon: "fas fa-fw fa-book-open"
+      url: "https://www.xiaohongshu.com/user/profile/654de3db000000000802c7b1"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+      url: "https://github.com/EvelynVi77"
 
 # Site Footer
 footer:
-  links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-square-x-twitter"
-      # url:
-      # rel: "me"  # optional: adds rel attribute (e.g. for IndieWeb web sign-in)
-    - label: "Facebook"
-      icon: "fab fa-fw fa-square-facebook"
-      # url:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      # url:
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
-      # url:
-    - label: "Bitbucket"
-      icon: "fab fa-fw fa-bitbucket"
-      # url:
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url:
+  links: []
   since: "2013"
 
 
@@ -235,6 +206,24 @@ sass:
 # Outputting
 permalink: /:categories/:title/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+# Portfolio collections
+collections:
+  research:
+    output: true
+    permalink: /research/:path/
+  projects:
+    output: true
+    permalink: /projects/:path/
+  teaching:
+    output: true
+    permalink: /teaching/:path/
+  design:
+    output: true
+    permalink: /design/:path/
+  practice:
+    output: true
+    permalink: /practice/:path/
 
 
 # Pagination with jekyll-paginate
@@ -331,4 +320,43 @@ defaults:
       comments: # true
       share: true
       related: true
-
+  - scope:
+      path: ""
+      type: research
+    values:
+      layout: single
+      author_profile: true
+      share: false
+      related: false
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: single
+      author_profile: true
+      share: false
+      related: false
+  - scope:
+      path: ""
+      type: teaching
+    values:
+      layout: single
+      author_profile: true
+      share: false
+      related: false
+  - scope:
+      path: ""
+      type: design
+    values:
+      layout: single
+      author_profile: true
+      share: false
+      related: false
+  - scope:
+      path: ""
+      type: practice
+    values:
+      layout: single
+      author_profile: true
+      share: false
+      related: false

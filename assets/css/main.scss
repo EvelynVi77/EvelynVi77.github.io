@@ -5,5 +5,254 @@ search: false
 
 @charset "utf-8";
 
+$doc-font-size: 14px;
+
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+/* Keep Minimal Mistakes' structure, with the quieter scale of the former Super site. */
+.masthead {
+  min-height: 56px;
+  border-bottom: 0;
+  box-shadow: none;
+}
+
+.masthead__inner-wrap {
+  max-width: 1300px;
+  padding-inline: 1.25rem;
+}
+
+.site-title {
+  font-size: 0.82em;
+  font-weight: 600;
+}
+
+.greedy-nav a {
+  font-size: 0.72em;
+  font-weight: 400;
+}
+
+.splash .page__content {
+  max-width: 1120px;
+  margin-inline: auto;
+}
+
+/* A compact profile block, separate from the theme's large feature image. */
+.home-intro {
+  > h1 {
+    margin: 0 0 1.25rem;
+    font-size: 1.6em;
+    font-weight: 600;
+  }
+
+  .feature__wrapper {
+    margin-bottom: 2rem;
+  }
+
+  .feature__item--center {
+    text-align: start;
+    font-size: 1em;
+  }
+
+  .archive__item-teaser {
+    float: inline-start;
+    width: 88px;
+    margin: 0 1.25rem 0.75rem 0;
+  }
+
+  .archive__item-teaser img {
+    width: 88px;
+    height: 88px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .archive__item-body {
+    width: auto;
+    margin: 0;
+    text-align: start;
+  }
+}
+
+/* Each homepage category is its own responsive grid, not a shared float flow. */
+.portfolio-section {
+  clear: both;
+  margin: 3.5rem 0;
+
+  > h2 {
+    margin: 0 0 1rem;
+    color: inherit;
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+
+  .grid__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .grid__item {
+    float: none;
+    width: auto;
+    margin: 0;
+  }
+
+  .grid__item:nth-child(n) {
+    clear: none;
+    margin-inline-start: 0;
+  }
+
+  .archive__item-teaser {
+    height: auto;
+    aspect-ratio: 16 / 9;
+    max-height: none;
+    overflow: hidden;
+    border-radius: 6px;
+  }
+
+  .archive__item-teaser img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .archive__item-title {
+    margin: 0.65rem 0 0.2rem;
+    font-size: 0.82em;
+    font-weight: 600;
+  }
+
+  .archive__item-title a,
+  .archive__item-title a:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .archive__item-title a:hover {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  .archive__item-excerpt {
+    margin: 0;
+    color: $text-color;
+    opacity: 0.82;
+    font-size: 0.68em;
+    line-height: 1.55;
+  }
+
+  .archive__item:hover .archive__item-teaser img {
+    transform: scale(1.015);
+  }
+}
+
+/* Collection archive pages use the same portfolio-card system as the homepage. */
+.layout--collection .archive {
+  float: none;
+  width: auto;
+  max-width: 1120px;
+  margin-inline: auto;
+  padding-inline-end: 0;
+
+  .entries-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .grid__item {
+    float: none;
+    width: auto;
+    margin: 0;
+  }
+
+  .grid__item:nth-child(n) {
+    clear: none;
+    margin-inline-start: 0;
+  }
+
+  .archive__item-teaser {
+    height: auto;
+    aspect-ratio: 16 / 9;
+    max-height: none;
+    overflow: hidden;
+    border-radius: 6px;
+  }
+
+  .archive__item-teaser img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .archive__item-title {
+    margin: 0.65rem 0 0.2rem;
+    font-size: 0.82em;
+    font-weight: 600;
+  }
+
+  .archive__item-title a,
+  .archive__item-title a:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .archive__item-title a:hover {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  .archive__item-excerpt {
+    display: block;
+    margin: 0;
+    color: $text-color;
+    opacity: 0.82;
+    font-size: 0.68em;
+    line-height: 1.55;
+  }
+}
+
+/* Project images keep their source ratio and follow the reading order. */
+.layout--single .page__content > p > img,
+.layout--single .page__content > p > a:only-child > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.layout--single .page__content > p > a:only-child {
+  display: block;
+}
+
+/* Opt into a narrower presentation on an individual image when needed. */
+.layout--single .page__content img.media--three-quarters {
+  width: 75%;
+  margin-inline: auto;
+}
+
+.layout--single .page__content img.media--two-thirds {
+  width: 66.6667%;
+  margin-inline: auto;
+}
+
+.layout--single .page__content img.media--half {
+  width: 50%;
+  margin-inline: auto;
+}
+
+@media (max-width: 64em) {
+  .portfolio-section .grid__wrapper,
+  .layout--collection .archive .entries-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 37.5em) {
+  .portfolio-section .grid__wrapper,
+  .layout--collection .archive .entries-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
