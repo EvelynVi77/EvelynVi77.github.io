@@ -22,7 +22,7 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Cheng Zeng (Evelyn)"
 description              : "Design, technology, and cognition."
-url                      : "https://evelynvi77.github.io"
+url                      : "https://evelynchengzeng.com"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "EvelynVi77/EvelynVi77.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -126,9 +126,6 @@ author:
     - label: "RedNote"
       icon: "fas fa-fw fa-book-open"
       url: "https://www.xiaohongshu.com/user/profile/654de3db000000000802c7b1"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/EvelynVi77"
 
 # Site Footer
 footer:

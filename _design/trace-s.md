@@ -1,5 +1,6 @@
 ---
 title: "Trace-s"
+order: 50
 excerpt: "A memorial park design for Korea’s 416 ferry disaster"
 header:
   teaser: /assets/responsive-media/34dcb088a1197813426c236f100603df87ba1bea5217e2a1ce0d3efcb532e292-960.webp
@@ -22,3 +23,4 @@ As visitors walk across the plaza, their footprints momentarily imprint upon the
 
 Below, an underground space is shaped by light and water descending from the plaza above. A spatial axis connects Danwon High School and the ferry’s sinking site, guiding visitors through zones of exhibition, reflection, and commemoration. Here, converging streams fall upon a dark reflective surface—becoming a “blackboard” on which traces of memory continue to be inscribed.
 
+- Collaborated with Qinrong Liu, Yuting Zhang, Zishen Wen and Qiaoqi Dai.

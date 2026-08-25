@@ -1,5 +1,6 @@
 ---
 title: "Liminal Dream: A Monument to the Deferred"
+order: 10
 excerpt: "A memorial landscape design reflecting the story of the DREAMers"
 header:
   teaser: /assets/responsive-media/ab4c11192cf976b092d9b11f45c1a64d032549e6335e83efbb376c8510526e7a-960.webp

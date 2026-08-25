@@ -226,6 +226,71 @@ $doc-font-size: 14px;
   display: block;
 }
 
+.layout--single .page__content video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Keep project-page prose quieter than the site navigation and archive cards. */
+.layout--single .page__content {
+  font-size: 0.84em;
+  line-height: 1.55;
+}
+
+/* A self-contained preview card for external press and publications. */
+.layout--single .page__content .external-link-card {
+  margin: 1.5rem 0;
+  overflow: hidden;
+  border: 1px solid rgba($text-color, 0.16);
+  border-radius: 6px;
+  background: rgba(white, 0.38);
+}
+
+.layout--single .page__content .external-link-card > a {
+  display: flex;
+  align-items: stretch;
+  min-height: 7rem;
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+.layout--single .page__content .external-link-card:hover {
+  border-color: rgba($text-color, 0.34);
+}
+
+.layout--single .page__content .external-link-card > a > img {
+  flex: 0 0 12rem;
+  width: 12rem;
+  height: auto;
+  margin: 0;
+  object-fit: cover;
+}
+
+.layout--single .page__content .external-link-card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.3rem;
+  padding: 0.8rem 1.1rem;
+}
+
+.layout--single .page__content .external-link-card__eyebrow,
+.layout--single .page__content .external-link-card__action {
+  font-size: 0.78em;
+  opacity: 0.72;
+}
+
+.layout--single .page__content .external-link-card__title {
+  font-size: 0.98em;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
 /* Opt into a narrower presentation on an individual image when needed. */
 .layout--single .page__content img.media--three-quarters {
   width: 75%;
@@ -242,9 +307,55 @@ $doc-font-size: 14px;
   margin-inline: auto;
 }
 
+/* Reusable composition blocks for project pages. */
+.layout--single .page__content .two-column,
+.layout--single .page__content .three-column {
+  display: grid;
+  gap: 1.5rem;
+  align-items: start;
+  margin: 2rem 0;
+}
+
+.layout--single .page__content .two-column {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.layout--single .page__content .three-column {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.layout--single .page__content .two-column.align-center,
+.layout--single .page__content .three-column.align-center {
+  align-items: center;
+}
+
+.layout--single .page__content .two-column > *,
+.layout--single .page__content .three-column > * {
+  min-width: 0;
+}
+
+.layout--single .page__content .two-column > figure,
+.layout--single .page__content .three-column > figure {
+  margin: 0;
+}
+
+.layout--single .page__content .two-column > img,
+.layout--single .page__content .two-column > video,
+.layout--single .page__content .three-column > img,
+.layout--single .page__content .three-column > video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
 @media (max-width: 64em) {
   .portfolio-section .grid__wrapper,
   .layout--collection .archive .entries-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .layout--single .page__content .three-column {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -254,5 +365,28 @@ $doc-font-size: 14px;
   .layout--collection .archive .entries-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+
+  .layout--single .page__content .two-column,
+  .layout--single .page__content .three-column {
+    grid-template-columns: 1fr;
+  }
+
+  .layout--single .page__content .external-link-card {
+    > a {
+      display: block;
+    }
+
+    > a > img {
+      display: block;
+      width: 100%;
+      height: auto;
+      min-height: 0;
+      aspect-ratio: 16 / 9;
+    }
+  }
+
+  .layout--single .page__content .external-link-card__content {
+    padding: 0.9rem 1rem 1rem;
   }
 }

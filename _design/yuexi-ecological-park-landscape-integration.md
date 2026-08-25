@@ -1,5 +1,6 @@
 ---
 title: "Yuexi Plaza Landscape Revitalization"
+order: 60
 excerpt: "Plaza landscape improvement design for Luhe County"
 header:
   teaser: /assets/responsive-media/d7af303b5079bfe475aead1b8def05ad00ed0717ed0d4fc8c72f5d59e6bfc362-960.webp
@@ -30,3 +31,4 @@ Through modest interventions and a sensitivity to local textures, the project en
 
 <img src="/assets/responsive-media/328cb6f78ae443e790846c9f913bf8696caf6e080471409d3b16261694415c0d-960.webp" srcset="/assets/responsive-media/328cb6f78ae443e790846c9f913bf8696caf6e080471409d3b16261694415c0d-480.webp 480w, /assets/responsive-media/328cb6f78ae443e790846c9f913bf8696caf6e080471409d3b16261694415c0d-960.webp 960w, /assets/imported-media/328cb6f78ae443e790846c9f913bf8696caf6e080471409d3b16261694415c0d.jpg 1085w" sizes="(max-width: 546px) 100vw, 100vw" alt="image" loading="lazy" width="3777" height="2671">
 
+- Collaborated with Qinrong Liu

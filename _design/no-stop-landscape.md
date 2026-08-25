@@ -1,5 +1,6 @@
 ---
 title: "No Stop Landscape"
+order: 20
 excerpt: "A mixed-use building in Medellin, Colombia inspired by No Stop City"
 header:
   teaser: /assets/responsive-media/bbf6afdc7a7a67a6c4eb23bbc6cd5d73fc91b7f2f51eb79e81e45ed204ac466a-960.webp

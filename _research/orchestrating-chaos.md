@@ -1,5 +1,6 @@
 ---
 title: "Orchestrating Chaos"
+order: 30
 excerpt: "Agent-based generative methods using reclaimed materials"
 header:
   teaser: /assets/responsive-media/dab7e31967248564c41f2cb5941fd2c536f9266d6f27a7b8b873fa68540e1fe8-960.webp
@@ -32,3 +33,4 @@ Next steps include integrating structural validation and fabrication-feasibility
 
 <img src="/assets/responsive-media/7d607c6f168de5d51b349e329fb7b28d92c4bab1773439fe496ba22d33cc178c-960.webp" srcset="/assets/responsive-media/7d607c6f168de5d51b349e329fb7b28d92c4bab1773439fe496ba22d33cc178c-480.webp 480w, /assets/responsive-media/7d607c6f168de5d51b349e329fb7b28d92c4bab1773439fe496ba22d33cc178c-960.webp 960w, /assets/imported-media/7d607c6f168de5d51b349e329fb7b28d92c4bab1773439fe496ba22d33cc178c.jpg 1366w" sizes="(max-width: 546px) 100vw, 100vw" alt="image" loading="lazy" width="710" height="398.63787375415285">
 
+- Collaborated with Ruoxi Li, Julian Tesche, Chi Zhang and Zhiyuan Zhang.

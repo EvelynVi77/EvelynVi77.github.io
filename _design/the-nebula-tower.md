@@ -1,5 +1,6 @@
 ---
 title: "The Nebula Tower"
+order: 40
 excerpt: "A landmark installation and landscape design for San Jose"
 header:
   teaser: /assets/responsive-media/e39f040a7cb89fb5c1ad12b4e2358de26c8f94d02fba3ba382f63b12b3ccc24b-960.webp
@@ -9,6 +10,17 @@ classes: wide
 Collaborative Design Competition Entry | 2021
 
 *Top 3 Finalist, Urban Confluence Silicon Valley International Competition*
+
+<div class="external-link-card">
+  <a href="https://www.gsd.harvard.edu/alumni-update/team-of-gsd-alumni-selected-as-finalists-in-urban-confluence-silicon-valley-design-competition/" target="_blank" rel="noopener noreferrer">
+    <img src="/assets/design/nebula-harvard-gsd-news.jpg" alt="The Nebula Tower featured by Harvard Graduate School of Design" loading="lazy">
+    <span class="external-link-card__content">
+      <span class="external-link-card__eyebrow">Harvard Graduate School of Design</span>
+      <span class="external-link-card__title">Team of GSD Alumni Selected as Finalists in Urban Confluence Silicon Valley Design Competition</span>
+      <span class="external-link-card__action">Read the article ↗</span>
+    </span>
+  </a>
+</div>
 
 Nebula Tower San Jose nurtures artistic expression through the ephemeral mediums of time and light. This architectural framework integrated into its landscape is designed with the innovative, risk-embracing spirit that has defined Silicon Valley throughout this past century. It aspires to contribute to contemporary design discourse by redefining what a civic landmark can and should be.
 
@@ -22,3 +34,4 @@ This new civic landmark rises above the network of transportation and infrastruc
 
 <img src="/assets/responsive-media/6499a23cf708712d3b86344a8c78b2ad3e37dcbb06d94525269573b7442eb062-960.webp" srcset="/assets/responsive-media/6499a23cf708712d3b86344a8c78b2ad3e37dcbb06d94525269573b7442eb062-480.webp 480w, /assets/responsive-media/6499a23cf708712d3b86344a8c78b2ad3e37dcbb06d94525269573b7442eb062-960.webp 960w, /assets/imported-media/6499a23cf708712d3b86344a8c78b2ad3e37dcbb06d94525269573b7442eb062.png 1200w" sizes="(max-width: 546px) 100vw, 100vw" alt="image" loading="lazy" width="710" height="355">
 
+- Collaborated with Qinrong Liu, Ruize Li, Yuting Zhang, Zishen Wen and Qiaoqi Dai.

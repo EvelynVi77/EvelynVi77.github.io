@@ -2,6 +2,8 @@
 main:
   - title: "About"
     url: /
+  - title: "CV"
+    url: /assets/CV/Cheng%20Zeng_CV.pdf
   - title: "Research"
     url: /research/
   - title: "Projects"

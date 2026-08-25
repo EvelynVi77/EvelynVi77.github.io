@@ -1,28 +1,52 @@
 ---
-title: "SpatialTell"
-excerpt: "VR Knowledge Graph prototype for interactive cultural heritage storytelling."
+title: "HeriTell"
+order: 10
+excerpt: "A VR technology probe for spatial authoring of interpretive cultural-heritage knowledge."
 header:
-  image: /assets/imported-media/7cdabfe47037f060466b7b80d210e9127e3cff4a4210bf63ede9ae158b0439a7.gif
-  teaser: /assets/imported-media/7cdabfe47037f060466b7b80d210e9127e3cff4a4210bf63ede9ae158b0439a7.gif
+  teaser: /assets/research/SpatialTellCover.gif
 classes: wide
 ---
 
-*Independent Research Project | Ongoing*
+Research Project | CHI EA '26 | 2026
 
-<a href="https://youtu.be/xrT5RJzHc70" target="_blank" rel="noopener noreferrer"><img src="/assets/imported-media/7cdabfe47037f060466b7b80d210e9127e3cff4a4210bf63ede9ae158b0439a7.gif" alt="SpatialTell video demo" loading="lazy" width="800" height="450"></a>
+*Cheng Zeng, Qinrong Liu, and Pengcheng An. [HeriTell: Supporting Interactive Documentation of Cultural Heritage Knowledge through Spatial Authoring](https://doi.org/10.1145/3772363.3798478). Extended Abstracts of the 2026 CHI Conference on Human Factors in Computing Systems, Barcelona, Spain.*
 
-*Full Demo: [https://youtu.be/xrT5RJzHc70](https://youtu.be/xrT5RJzHc70)*
+<a href="https://youtu.be/xrT5RJzHc70" target="_blank" rel="noopener noreferrer"><img src="/assets/research/SpatialTellCover.gif" alt="HeriTell VR authoring demo" loading="lazy" width="800" height="450"></a>
 
-*SpatialTell* is an immersive, VR-based prototype for anchoring spoken knowledge directly onto the architectural elements it describes. Instead of composing through files and menus, users work in-scene: they point to a beam, plaque, or doorway (via controller), speak in natural language, and receive subtle ambient feedback—light/outline cues and brief confirmations—that their statement has been captured and attached to that specific object. Treating authoring as an experience-first interaction, the environment itself behaves like a non-anthropomorphic “space agent” that listens and gently clarifies when needed. Each contribution is stored as a minimal, persistent, object-anchored note so that context is preserved and later retrieval stays tied to place.
+*Full demo: [youtu.be/xrT5RJzHc70](https://youtu.be/zDYq8y6fiTM)*
 
-<img src="/assets/responsive-media/916255fc3805de8194dbda2002636699163aa32bacff19b507d52bde989ad88e-960.webp" srcset="/assets/responsive-media/916255fc3805de8194dbda2002636699163aa32bacff19b507d52bde989ad88e-480.webp 480w, /assets/responsive-media/916255fc3805de8194dbda2002636699163aa32bacff19b507d52bde989ad88e-960.webp 960w, /assets/imported-media/916255fc3805de8194dbda2002636699163aa32bacff19b507d52bde989ad88e.png 1366w" sizes="(max-width: 768px) 100vw, 1200px" alt="SpatialTell interface overview" loading="lazy" width="1366" height="641">
+## Spatial authoring for interpretive heritage knowledge
 
-<img src="/assets/responsive-media/cb064ef9a6cd1334573ecc4d354ae2f482946ad255ff1d76df1015da2fc3637d-960.webp" srcset="/assets/responsive-media/cb064ef9a6cd1334573ecc4d354ae2f482946ad255ff1d76df1015da2fc3637d-480.webp 480w, /assets/responsive-media/cb064ef9a6cd1334573ecc4d354ae2f482946ad255ff1d76df1015da2fc3637d-960.webp 960w, /assets/imported-media/cb064ef9a6cd1334573ecc4d354ae2f482946ad255ff1d76df1015da2fc3637d.jpg 1366w" sizes="(max-width: 768px) 100vw, 1200px" alt="SpatialTell interaction scene" loading="lazy" width="1366" height="765">
+Cultural-heritage expertise is often interpretive, relational, and inseparable from spatial context. Yet in common documentation workflows, photographs, textual descriptions, and annotated drawings remain separated from the 3D assets they describe. This spatial-referencing gap makes it difficult to revisit a component in context, compare contributions, or understand how an interpretation relates to its surroundings.
 
-<img src="/assets/responsive-media/9b25db3a24327dc4eda1bbeba9593cee5b36ad9f32d37a305af9e3e4fdfff54b-960.webp" srcset="/assets/responsive-media/9b25db3a24327dc4eda1bbeba9593cee5b36ad9f32d37a305af9e3e4fdfff54b-480.webp 480w, /assets/responsive-media/9b25db3a24327dc4eda1bbeba9593cee5b36ad9f32d37a305af9e3e4fdfff54b-960.webp 960w, /assets/imported-media/9b25db3a24327dc4eda1bbeba9593cee5b36ad9f32d37a305af9e3e4fdfff54b.jpg 1366w" sizes="(max-width: 768px) 100vw, 1200px" alt="SpatialTell prototype" loading="lazy" width="1366" height="766">
+HeriTell is a VR-based technology probe that lets heritage experts author knowledge directly within an immersive 3D scene. Instead of translating observations into a separate document, an expert selects an architectural component and narrates an interpretation in natural language. The system retains the interpretation while lightly parsing clearly stated information, such as material, period, or function, into a spatially anchored panel.
 
-*SpatialTell* reframes heritage work from “viewing content” to “authoring in place,” lowering barriers for non-technical contributors and making each addition visibly live where it matters.
+<img src="/assets/research/usage%20scenarios.png" alt="HeriTell usage scenarios: exploring a heritage scene, narrating an interpretation, resolving ambiguity, and viewing spatially anchored knowledge" loading="lazy" width="8359" height="5126">
 
-Looking ahead, the same pipeline can support VR education and tourism once a site’s corpus grows, and extend to participatory urban memory, where residents contribute situated stories to their neighborhoods.
+The authoring flow is designed to be low-friction: enter and explore the scene, point to a component, speak, then receive either a confirmation or a clarification prompt when the referent or description is ambiguous. Over time, the scene is augmented with component-level knowledge panels that retain both the original narrative and its spatial reference.
 
-<img src="/assets/responsive-media/ced3b9266255661a8aa072b40e10626af07d0c6d01c475b8445462cde35b4725-960.webp" srcset="/assets/responsive-media/ced3b9266255661a8aa072b40e10626af07d0c6d01c475b8445462cde35b4725-480.webp 480w, /assets/responsive-media/ced3b9266255661a8aa072b40e10626af07d0c6d01c475b8445462cde35b4725-960.webp 960w, /assets/imported-media/ced3b9266255661a8aa072b40e10626af07d0c6d01c475b8445462cde35b4725.jpg 1366w" sizes="(max-width: 768px) 100vw, 1200px" alt="SpatialTell spatial storytelling" loading="lazy" width="1366" height="478">
+## From records to situated interpretation
+
+The project was developed as a design-led research probe rather than as a system-performance evaluation. Its design follows three principles: articulate interpretive knowledge in space; allow casual expert narration before applying minimal structure; and support knowledge that can accumulate, be revisited, and be compared across contributors and sessions.
+
+<img src="/assets/research/expert%20records.png" alt="Examples of current heritage documentation: annotated CAD drawings and written records alongside digital-asset images" loading="lazy" width="8549" height="3124">
+
+In a formative study, two cultural-heritage experts with more than fifteen years of professional experience used HeriTell to contribute interpretations to five to eight components of a Chinese Buddhist-temple scene. Their situated accounts revealed three forms of knowledge that are difficult to reduce to isolated attributes:
+
+- **Historical reasoning across time and cultures**: formal details became evidence for processes of cultural transmission and change.
+- **Style as social and political code**: decorative features gained meaning through their placement, role, and symbolic status.
+- **Relational knowledge across components**: experts explained objects through their relationships to adjacent elements and to the larger spatial setting.
+
+Experts also identified remote contribution, long-term multi-expert documentation, teaching, and museum interpretation as promising scenarios for further development. These are opportunities suggested by the probe, rather than claims of a completed deployment.
+
+## System Implementation
+
+The prototype was built in Unity and deployed on Meta Quest 3. It combines voice interaction with an LLM-orchestrated workflow: speech is transcribed, minimally parsed, and returned as a spatially anchored semi-structured annotation; ambiguous input triggers a clarification request. Component-specific records are stored as JSON, allowing contributions to be updated and revisited within the scene.
+
+<img src="/assets/research/system%20implementation.png" alt="System Implementation" loading="lazy" width="8549" height="3124">
+
+## Project Poster
+
+<img src="/assets/research/20260404_HeriTell%20Poster.png" alt="HeriTell CHI EA 2026 poster" loading="lazy" width="5027" height="7082">
+
+The study is published as a CHI EA '26 extended abstract. [Read the paper ↗](https://doi.org/10.1145/3772363.3798478)

@@ -1,5 +1,6 @@
 ---
 title: "Swirl Pavilion"
+order: 30
 excerpt: "Digitally-fabricated developable surface form exploration"
 header:
   teaser: /assets/responsive-media/3ca9baa3e13bdfb5f90d23534e6dc55de93361e3129acf47aec0247a78883005-960.webp
@@ -18,3 +19,4 @@ In the actual fabrication, we chose the double oculus form and used sheet metal 
 
 The project explored developable geometries not just as formal outcomes but as a mode of inquiry—testing the relationship between curvature, material constraints, and fabrication logic.
 
+- Collaborated with Feijiao Huo & Kai Liao.

@@ -1,5 +1,6 @@
 ---
 title: "The Media Tower"
+order: 30
 excerpt: "A landmark tower and urban design scheme for HafenCity, Hamburg"
 header:
   teaser: /assets/responsive-media/1afdeb20baf008af4586eea17db9e7374ef7f2cf72cd0ec46b2195c635b46bf2-960.webp
@@ -30,3 +31,4 @@ The inspiration of the tower comes from the intention of celebrating media cultu
 
 <img src="/assets/responsive-media/240784df874a09fda749db0f5b8fa33062f1f0ecaf4d7232dcf6122310b1b4d1-960.webp" srcset="/assets/responsive-media/240784df874a09fda749db0f5b8fa33062f1f0ecaf4d7232dcf6122310b1b4d1-480.webp 480w, /assets/responsive-media/240784df874a09fda749db0f5b8fa33062f1f0ecaf4d7232dcf6122310b1b4d1-960.webp 960w, /assets/imported-media/240784df874a09fda749db0f5b8fa33062f1f0ecaf4d7232dcf6122310b1b4d1.png 1266w" sizes="(max-width: 546px) 100vw, 56vw" alt="image" loading="lazy" width="527.6174773289365" height="320">
 
+- Collaborated with Kun Zhang on urban design

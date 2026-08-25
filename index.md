@@ -23,7 +23,7 @@ intro:
 <h2>Research</h2>
 
 <div class="grid__wrapper">
-  {% include documents-collection.html collection="research" type="grid" %}
+  {% include documents-collection.html collection="research" sort_by="order" type="grid" %}
 </div>
 
 </section>
@@ -33,7 +33,7 @@ intro:
 <h2>Projects</h2>
 
 <div class="grid__wrapper">
-  {% include documents-collection.html collection="projects" type="grid" %}
+  {% include documents-collection.html collection="projects" sort_by="order" type="grid" %}
 </div>
 
 </section>
@@ -43,7 +43,7 @@ intro:
 <h2>Teaching</h2>
 
 <div class="grid__wrapper">
-  {% include documents-collection.html collection="teaching" type="grid" %}
+  {% include documents-collection.html collection="teaching" sort_by="order" type="grid" %}
 </div>
 
 </section>
@@ -53,7 +53,7 @@ intro:
 <h2>Design</h2>
 
 <div class="grid__wrapper">
-  {% include documents-collection.html collection="design" type="grid" %}
+  {% include documents-collection.html collection="design" sort_by="order" type="grid" %}
 </div>
 
 </section>
@@ -63,7 +63,7 @@ intro:
 <h2>Practice</h2>
 
 <div class="grid__wrapper">
-  {% include documents-collection.html collection="practice" type="grid" %}
+  {% include documents-collection.html collection="practice" sort_by="order" type="grid" %}
 </div>
 
 </section>
