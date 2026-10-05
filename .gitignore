@@ -30,3 +30,8 @@ codekit-config.json
 .sass-cache
 _asset_bundler_cache
 _site
+.image-cache/
+__pycache__/
+
+# Local maintenance notes
+/.local/
