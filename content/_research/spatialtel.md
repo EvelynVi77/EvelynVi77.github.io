@@ -1,6 +1,12 @@
 ---
 title: "HeriTell"
 order: 10
+home_section: research
+home_order: 1
+home_label: "Human–computer interaction · 2026"
+home_excerpt: "A VR technology probe for documenting cultural-heritage knowledge through voice and spatial authoring. Experts contribute interpretations directly within the 3D environments they describe."
+home_note: "Published in CHI EA ’26"
+home_link_label: "View research"
 excerpt: "A VR technology probe for spatial authoring of interpretive cultural-heritage knowledge."
 header:
   teaser: /assets/research/spatialtel/SpatialTellCover.gif

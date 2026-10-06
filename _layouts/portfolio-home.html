@@ -1,0 +1,57 @@
+---
+layout: splash
+---
+{% assign cv_link = site.data.navigation.main | where: "title", "CV" | first %}
+{% assign linkedin_link = site.author.links | where: "label", "LinkedIn" | first %}
+{% assign home_entries = site.documents | where_exp: "item", "item.home_section and item.hidden != true and item.published != false" | sort: "home_order" %}
+
+<div class="home-portfolio">
+  <header class="home-intro home-intro--compact">
+    <img class="home-intro__portrait" src="{{ page.portrait | relative_url }}" alt="{{ site.author.name | escape }}" width="96" height="96">
+    <div class="home-intro__text">
+      <h1>Hi, I’m {{ site.author.name | escape }}</h1>
+      <div class="home-intro__bio">{{ content }}</div>
+      {% if page.background %}<p class="home-intro__background">{{ page.background | escape }}</p>{% endif %}
+      <nav class="home-intro__links" aria-label="Profile links">
+        {% if cv_link %}<a href="{{ cv_link.url | relative_url }}" target="_blank" rel="noopener noreferrer">CV <span class="home-link-arrow" aria-hidden="true">↗</span></a>{% endif %}
+        {% if linkedin_link %}<a href="{{ linkedin_link.url }}" target="_blank" rel="noopener noreferrer">LinkedIn <span class="home-link-arrow" aria-hidden="true">↗</span></a>{% endif %}
+      </nav>
+    </div>
+  </header>
+
+  <section class="home-section" aria-labelledby="home-research-title">
+    <div class="home-section__heading">
+      <h2><span id="home-research-title">{{ page.home_titles.research | default: 'Research' | escape }}</span></h2>
+      <a href="{{ '/research/' | relative_url }}">{{ page.home_link_labels.research | default: 'All research' | escape }} <span aria-hidden="true">→</span></a>
+    </div>
+    {% assign research_entries = home_entries | where: "home_section", "research" %}
+    {% for document in research_entries %}
+      {% include home-feature.html document=document eager=true %}
+    {% endfor %}
+  </section>
+
+  <section class="home-section" aria-labelledby="home-work-title">
+    <div class="home-section__heading">
+      <h2><span id="home-work-title">{{ page.home_titles.work | default: 'Selected work' | escape }}</span></h2>
+      <nav aria-label="More work">
+        <a href="{{ '/projects/' | relative_url }}">{{ page.home_link_labels.projects | default: 'Projects' | escape }} <span aria-hidden="true">→</span></a>
+        <a href="{{ '/design/' | relative_url }}">{{ page.home_link_labels.design | default: 'Design' | escape }} <span aria-hidden="true">→</span></a>
+      </nav>
+    </div>
+    {% assign work_entries = home_entries | where: "home_section", "work" %}
+    {% for document in work_entries %}
+      {% include home-feature.html document=document %}
+    {% endfor %}
+  </section>
+
+  <section class="home-section" aria-labelledby="home-teaching-title">
+    <div class="home-section__heading">
+      <h2><span id="home-teaching-title">{{ page.home_titles.teaching | default: 'Teaching' | escape }}</span></h2>
+      <a href="{{ '/teaching/' | relative_url }}">{{ page.home_link_labels.teaching | default: 'All teaching' | escape }} <span aria-hidden="true">→</span></a>
+    </div>
+    {% assign teaching_entries = home_entries | where: "home_section", "teaching" %}
+    {% for document in teaching_entries %}
+      {% include home-feature.html document=document %}
+    {% endfor %}
+  </section>
+</div>

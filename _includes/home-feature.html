@@ -1,0 +1,20 @@
+{% assign document = include.document %}
+{% assign feature_id = document.url | slugify | prepend: 'home-feature-' %}
+<article class="home-feature">
+  <a class="home-feature__link" href="{{ document.url | relative_url }}" aria-labelledby="{{ feature_id }}">
+    <div class="home-feature__media archive__item-teaser">
+      <img src="{{ document.header.teaser | relative_url }}"
+           alt="{{ document.title | escape }}"
+           sizes="(max-width: 640px) calc(100vw - 2rem), (max-width: 1040px) calc(40vw - 0.8rem), 384px"
+           loading="{% if include.eager %}eager{% else %}lazy{% endif %}"
+           decoding="async">
+    </div>
+    <div class="home-feature__body">
+      {% if document.home_label %}<p class="home-feature__label">{{ document.home_label | escape }}</p>{% endif %}
+      <h3><span id="{{ feature_id }}">{{ document.title | escape }}</span></h3>
+      <p class="home-feature__description">{{ document.home_excerpt | default: document.excerpt | strip_html | escape }}</p>
+      {% if document.home_note %}<p class="home-feature__note">{{ document.home_note | escape }}</p>{% endif %}
+      <span class="home-feature__action" aria-hidden="true">{{ document.home_link_label | default: 'View project' }} <span>→</span></span>
+    </div>
+  </a>
+</article>

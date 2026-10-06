@@ -1,6 +1,12 @@
 ---
 title: "Thesis Studio in VR Design"
 order: 40
+home_section: teaching
+home_order: 1
+home_label: "Graduation thesis studio · SZTU · 2025"
+home_excerpt: "A thesis studio exploring how VR can extend spatial experience, from virtual memorials to embodied play. Student projects connect immersive interaction with the social meaning of built environments."
+home_note: "Instructors: Cheng Zeng and Meikang Li"
+home_link_label: "View studio"
 excerpt: "SZTU Environmental Design Graduation Thesis Studio 2025"
 header:
   teaser: /assets/teaching/sztu-vr-theses/cover.jpg
@@ -36,4 +42,3 @@ The studio used VR as both design medium and research lens—testing how embodie
 <img src="/assets/teaching/sztu-vr-theses/image-06.gif" alt="Student: Huabin Lin; Thesis Title: Leap Beyond — XR Integration in Urban-Village Fitness Space Design" loading="lazy" width="710" height="399.375">
 <figcaption>Student: Huabin Lin; Thesis Title: Leap Beyond — XR Integration in Urban-Village Fitness Space Design</figcaption>
 </figure>
-

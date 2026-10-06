@@ -1,6 +1,11 @@
 ---
 title: "Trace-s"
 order: 50
+home_section: work
+home_order: 2
+home_label: "Collaborative memorial landscape · 2021"
+home_excerpt: "A memorial landscape for the Sewol ferry disaster. Interwoven water lines and visitors’ fleeting footprints connect individual remembrance with a shared civic space."
+home_note: "Honorable Mention, Non-Architecture Unbuilt Project Award 2022"
 excerpt: "A memorial park design for Korea’s 416 ferry disaster"
 header:
   teaser: /assets/design/trace-s/cover.jpg

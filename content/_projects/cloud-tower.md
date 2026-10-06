@@ -1,6 +1,11 @@
 ---
 title: "Cloud Tower"
 order: 8
+home_section: work
+home_order: 1
+home_label: "Collaborative XR installation · 2025"
+home_excerpt: "An immersive ascent through an octagonal tower and a point-cloud city. Walking through the installation turns the logic of a computational model into an embodied spatial experience."
+home_note: "Exhibited at the Shenzhen & Hong Kong Bi-City Biennale of Urbanism/Architecture"
 excerpt: "An immersive XR ascent through an octagonal tower and a point-cloud city."
 header:
   teaser: /assets/projects/cloud-tower/CloudTower%20Scenes.png
