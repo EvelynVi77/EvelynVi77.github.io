@@ -193,6 +193,29 @@ class Optimizer:
             for key, value in values.items()
         ) + ">"
 
+    def rewrite_poster(self, attrs, page):
+        values = dict(attrs)
+        poster = values.get("poster", "")
+        if not poster or values.get("data-image-optimize") == "false" or GENERATED_PATH in unquote(urlsplit(poster).path):
+            return None
+        path = self.local_image(poster, page)
+        result = self.variants(path) if path else None
+        if result is None:
+            return None
+        directory, entry = result
+        selected = next((item for item in entry["variants"] if item["width"] >= 1600), entry["variants"][-1])
+        target = self.destination / GENERATED_PATH / selected["name"]
+        target.parent.mkdir(parents=True, exist_ok=True)
+        if not target.is_file():
+            shutil.copyfile(directory / selected["name"], target)
+        self.used_files.add(target)
+        values["poster"] = quote(f"{self.baseurl}/{GENERATED_PATH}/{selected['name']}", safe="/")
+        self.rewritten += 1
+        return "<video" + "".join(
+            f' {key}="{html.escape(value, quote=True)}"' if value is not None else f" {key}"
+            for key, value in values.items()
+        ) + ">"
+
     def restore_legacy_assets(self):
         """Keep published original-asset URLs working after source reorganization."""
         manifest = self.source / "scripts/legacy_asset_paths.json"
@@ -239,8 +262,9 @@ class ImageRewriter(HTMLParser):
         values = dict(attrs)
         ancestors = {name for name, _ in self.stack}
         ancestors.update(token for _, tokens in self.stack for token in tokens)
-        if tag == "img":
-            replacement = self.optimizer.rewrite_image(attrs, ancestors, self.page)
+        if tag in {"img", "video"}:
+            replacement = (self.optimizer.rewrite_image(attrs, ancestors, self.page) if tag == "img"
+                           else self.optimizer.rewrite_poster(attrs, self.page))
             if replacement:
                 line, column = self.getpos()
                 start = self.lines[line - 1] + column

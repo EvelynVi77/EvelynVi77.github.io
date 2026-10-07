@@ -28,16 +28,16 @@ jobs:
           python-version: '3.12'
           cache: pip
           cache-dependency-path: scripts/requirements.txt
-      - name: Install image optimizer
+      - name: Install media optimizers
         run: python3 -m pip install -r scripts/requirements.txt
       - name: Cache optimized images
         uses: actions/cache@v4
         with:
           path: .image-cache
-          key: images-${{ runner.os }}-${{ hashFiles('scripts/optimize_images.py', 'scripts/requirements.txt') }}-${{ github.sha }}
+          key: images-${{ runner.os }}-${{ hashFiles('scripts/optimize_images.py', 'scripts/prepare_videos.py', 'scripts/requirements.txt') }}-${{ github.sha }}
           restore-keys: |
-            images-${{ runner.os }}-${{ hashFiles('scripts/optimize_images.py', 'scripts/requirements.txt') }}-
-      - name: Test image optimizer
+            images-${{ runner.os }}-${{ hashFiles('scripts/optimize_images.py', 'scripts/prepare_videos.py', 'scripts/requirements.txt') }}-
+      - name: Test media optimizers
         run: python3 -m unittest discover -s scripts/tests -v
       - name: Build site and optimize images
         env:

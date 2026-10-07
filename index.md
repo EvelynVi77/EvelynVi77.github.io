@@ -7,7 +7,7 @@ portrait: /assets/imported-media/e714ab0bc8d8176dee53178fb255f754a4dd5ef1581fd5c
 background: "M.Arch, Harvard GSD · B.Arch & BFA, RISD"
 home_titles:
   research: "Selected Research"
-  work: "Selected work"
+  work: "Selected Work"
   teaching: "Selected Teaching"
 home_link_labels:
   research: "All research"

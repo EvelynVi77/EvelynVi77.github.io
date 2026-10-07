@@ -14,8 +14,8 @@ This course centers on TouchDesigner’s node-based programming. Through a combi
 Emphasizing the integration of computational logic and visual expression, the course helps students build dynamic visual works in a systematic way, and lays a solid technical and creative foundation for future exploration in fields such as media playback/control, interaction design, and digital art.
 
 <figure>
-<video autoplay muted loop playsinline preload="metadata" aria-label="Creative Coding student work by An Cheng, Hao Ning, and Xiaole Guo">
-  <source src="/assets/teaching/An%20Cheng,%20Hao%20Ning,%20Xiaole%20Guo.mp4" type="video/mp4">
+<video controls autoplay muted loop playsinline preload="metadata" width="1440" height="1080" poster="/assets/teaching/creative-coding/star-dust-old-dreams.jpg" aria-label="Creative Coding student work by An Cheng, Hao Ning, and Xiaole Guo">
+  <source src="/assets/teaching/creative-coding/An%20Cheng%2C%20Hao%20Ning%2C%20Xiaole%20Guo.mp4" type="video/mp4">
   Your browser does not support embedded video.
 </video>
 <figcaption>Students: An Cheng, Hao Ning, Xiaole Guo</figcaption>

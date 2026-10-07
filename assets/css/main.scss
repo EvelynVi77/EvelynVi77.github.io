@@ -276,14 +276,17 @@ $doc-font-size: 14px;
     line-height: 1.55;
   }
 
-  .home-feature__action {
-    display: inline-block;
-    margin-top: 1rem;
-    font-size: 0.77rem;
-    font-weight: 600;
+}
 
-    span {
-      margin-inline-start: 0.25rem;
+/* Override the theme's whole-link underline for homepage cards. */
+.page__content .home-feature .home-feature__link {
+  &:hover,
+  &:focus-visible {
+    text-decoration: none;
+
+    h3 span {
+      text-decoration: underline;
+      text-underline-offset: 0.12em;
     }
   }
 }

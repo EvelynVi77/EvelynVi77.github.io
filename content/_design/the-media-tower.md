@@ -25,8 +25,6 @@ The inspiration of the tower comes from the intention of celebrating media cultu
 
 <img src="/assets/design/the-media-tower/image-04.jpg" alt="image" loading="lazy" width="709.984375" height="495.24579729352683">
 
-<img src="/assets/design/the-media-tower/image-05.jpg" alt="image" loading="lazy" width="681.9874877929688" height="1029.4150759139152">
-
 <img src="/assets/design/the-media-tower/image-06.png" alt="image" loading="lazy" width="595.3488372093024" height="320">
 
 <img src="/assets/design/the-media-tower/image-07.png" alt="image" loading="lazy" width="527.6174773289365" height="320">

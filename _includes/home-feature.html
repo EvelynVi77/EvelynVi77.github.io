@@ -14,7 +14,6 @@
       <h3><span id="{{ feature_id }}">{{ document.title | escape }}</span></h3>
       <p class="home-feature__description">{{ document.home_excerpt | default: document.excerpt | strip_html | escape }}</p>
       {% if document.home_note %}<p class="home-feature__note">{{ document.home_note | escape }}</p>{% endif %}
-      <span class="home-feature__action" aria-hidden="true">{{ document.home_link_label | default: 'View project' }} <span>→</span></span>
     </div>
   </a>
 </article>

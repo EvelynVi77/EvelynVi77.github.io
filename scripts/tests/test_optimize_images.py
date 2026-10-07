@@ -171,6 +171,27 @@ class OptimizeImagesTest(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "must stay inside assets"):
             Optimizer(self.source, self.destination).restore_legacy_assets()
 
+    def test_video_poster_optimized_without_changing_player_or_original(self):
+        poster = self.image(size=(1800, 1000))
+        original = poster.read_bytes()
+        text = ('<video controls autoplay muted loop playsinline width="1440" height="1080" '
+                'poster="/assets/projects/demo/original%20image.png">'
+                '<source src="movie.mp4" type="video/mp4"></video>')
+        rendered, optimizer = self.rewrite(text)
+        self.assertIn('poster="/assets/optimized-media/', rendered)
+        self.assertIn('controls autoplay muted loop playsinline width="1440" height="1080"', rendered)
+        self.assertIn('<source src="movie.mp4" type="video/mp4"></video>', rendered)
+        self.assertEqual(poster.read_bytes(), original)
+        self.assertEqual(len(optimizer.used_files), 1)
+        with Image.open(next(iter(optimizer.used_files))) as image:
+            self.assertEqual(image.size, (1600, 889))
+        self.assertEqual(self.rewrite(rendered)[0], rendered)
+
+    def test_remote_and_opted_out_posters_untouched(self):
+        text = ('<video poster="https://example.com/poster.jpg"></video>'
+                '<video poster="/assets/missing.jpg" data-image-optimize="false"></video>')
+        self.assertEqual(self.rewrite(text)[0], text)
+
 
 if __name__ == "__main__":
     unittest.main()

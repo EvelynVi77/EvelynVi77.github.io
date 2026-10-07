@@ -1,15 +1,37 @@
 {% assign locale = include.locale | default: site.locale %}
-{% if page.previous or page.next %}
-  <nav class="pagination" aria-label="Post pagination">
-    {% if page.previous %}
-      <a href="{{ page.previous.url | relative_url }}" class="pagination--pager" title="{{ page.previous.title | markdownify | strip_html | strip}}">{{ site.data.ui-text[locale].pagination_previous | default: "Previous" }}</a>
-    {% else %}
-      <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[locale].pagination_previous | default: "Previous" }}</a>
+{% assign previous_entry = page.previous %}
+{% assign next_entry = page.next %}
+{% assign pagination_label = 'Post pagination' %}
+{% if page.collection and page.collection != 'posts' %}
+  {% assign pagination_label = 'Collection pagination' %}
+  {% assign entries = site[page.collection] | where_exp: 'entry', 'entry.hidden != true' | sort: 'order' %}
+  {% assign previous_entry = nil %}
+  {% assign next_entry = nil %}
+  {% for entry in entries %}
+    {% if entry.url == page.url %}
+      {% unless forloop.first %}
+        {% assign previous_index = forloop.index0 | minus: 1 %}
+        {% assign previous_entry = entries[previous_index] %}
+      {% endunless %}
+      {% unless forloop.last %}
+        {% assign next_index = forloop.index0 | plus: 1 %}
+        {% assign next_entry = entries[next_index] %}
+      {% endunless %}
+      {% break %}
     {% endif %}
-    {% if page.next %}
-      <a href="{{ page.next.url | relative_url }}" class="pagination--pager" title="{{ page.next.title | markdownify | strip_html | strip}}">{{ site.data.ui-text[locale].pagination_next | default: "Next" }}</a>
+  {% endfor %}
+{% endif %}
+{% if previous_entry or next_entry %}
+  <nav class="pagination" aria-label="{{ pagination_label }}">
+    {% if previous_entry %}
+      <a href="{{ previous_entry.url | relative_url }}" class="pagination--pager" title="{{ previous_entry.title | markdownify | strip_html | strip}}">{{ site.data.ui-text[locale].pagination_previous | default: "Previous" }}</a>
     {% else %}
-      <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[locale].pagination_next | default: "Next" }}</a>
+      <span class="pagination--pager disabled" aria-disabled="true">{{ site.data.ui-text[locale].pagination_previous | default: "Previous" }}</span>
+    {% endif %}
+    {% if next_entry %}
+      <a href="{{ next_entry.url | relative_url }}" class="pagination--pager" title="{{ next_entry.title | markdownify | strip_html | strip}}">{{ site.data.ui-text[locale].pagination_next | default: "Next" }}</a>
+    {% else %}
+      <span class="pagination--pager disabled" aria-disabled="true">{{ site.data.ui-text[locale].pagination_next | default: "Next" }}</span>
     {% endif %}
   </nav>
 {% endif %}

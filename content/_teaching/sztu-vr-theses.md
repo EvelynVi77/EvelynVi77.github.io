@@ -6,7 +6,6 @@ home_order: 1
 home_label: "Graduation thesis studio · SZTU · 2025"
 home_excerpt: "A thesis studio exploring how VR can extend spatial experience, from virtual memorials to embodied play. Student projects connect immersive interaction with the social meaning of built environments."
 home_note: "Instructors: Cheng Zeng and Meikang Li"
-home_link_label: "View studio"
 excerpt: "SZTU Environmental Design Graduation Thesis Studio 2025"
 header:
   teaser: /assets/teaching/sztu-vr-theses/cover.jpg
