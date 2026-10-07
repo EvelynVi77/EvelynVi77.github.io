@@ -106,7 +106,7 @@ social:
 
 # Analytics
 analytics:
-  provider               : # false (default), "google", "google-universal", "google-gtag", "custom"
+  provider               : "custom" # Cloudflare Web Analytics; production builds only
   google:
     tracking_id          :
     anonymize_ip         : # true, false (default)
